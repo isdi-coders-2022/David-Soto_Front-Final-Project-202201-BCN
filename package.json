@@ -13,7 +13,9 @@
     "husky": "^7.0.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-router": "^6.2.2",
     "react-scripts": "5.0.0",
+    "styled-components": "^5.3.3",
     "typescript": "^4.6.2",
     "web-vitals": "^2.1.4"
   },
@@ -47,7 +49,8 @@
     "collectCoverageFrom": [
       "src/**/*.tsx",
       "src/**/*.ts",
-      "!src/index.tsx"
+      "!src/index.tsx",
+      "!src/interfaces/*.ts"
     ]
   }
 }
