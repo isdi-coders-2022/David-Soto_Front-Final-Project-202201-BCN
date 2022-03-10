@@ -2,9 +2,9 @@ import { render, screen } from "@testing-library/react";
 import { Hero } from "../interfaces/Hero";
 import GlobalList from "./GlobalList";
 
-describe("Given", () => {
-  describe("When", () => {
-    test("Then", () => {
+describe("Given a GlobalList component", () => {
+  describe("When it's called", () => {
+    test("Then it should render a heading with name 'Name: TestingHero'", () => {
       const testingHeroes: Hero[] = [
         {
           id: 12,
