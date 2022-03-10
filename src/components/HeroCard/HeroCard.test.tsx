@@ -4,7 +4,7 @@ import HeroCard from "./HeroCard";
 
 describe("Given a HeroCard component", () => {
   describe("When it's called", () => {
-    test("Then it should render", () => {
+    test("Then it should render itself with heading 'Name: TestingHero'", () => {
       const testingHero: Hero = {
         id: 12,
         name: "TestingHero",
