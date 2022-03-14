@@ -52,6 +52,7 @@
     "collectCoverageFrom": [
       "src/**/*.tsx",
       "src/**/*.ts",
+      "src/**/*.js",
       "!src/index.tsx",
       "!src/interfaces/*.ts"
     ]
