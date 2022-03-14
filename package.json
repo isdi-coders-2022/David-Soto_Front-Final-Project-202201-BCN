@@ -26,7 +26,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --passWithNoTests",
-    "coverage": "react-scripts test --coverage",
+    "coverage": "react-scripts test --coverage --watchAll",
     "eject": "react-scripts eject",
     "prepare": "husky install"
   },
@@ -54,7 +54,8 @@
       "src/**/*.ts",
       "src/**/*.js",
       "!src/index.tsx",
-      "!src/interfaces/*.ts"
+      "!src/interfaces/*.ts",
+      "!src/reportWebVitals.ts"
     ]
   }
 }
