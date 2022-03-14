@@ -13,6 +13,9 @@ const NavigationStyled: StyledComponent<"ul", {}> = styled.ul`
 
   h1 {
     margin-right: 20px;
+    font-family: "Permanent Marker", cursive;
+    color: White;
+    text-shadow: rgb(51, 51, 51) 0px 0px 0px 3px;
   }
 
   .navigation {
