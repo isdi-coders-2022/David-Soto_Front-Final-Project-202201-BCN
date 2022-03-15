@@ -1,0 +1,6 @@
+name: env_tutorial
+
+on: [pull_request, push]
+
+env:
+  REACT_APP_API_URL: https://ultra-warriors-david-soto.onrender.com
