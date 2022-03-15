@@ -10,7 +10,7 @@ const heroReducer = (
 
   switch (action.type) {
     case actionTypes.loadGlobalList:
-      newHeroes = [...action.heroes];
+      newHeroes = [...action.heroes.heroes];
       break;
 
     default:
