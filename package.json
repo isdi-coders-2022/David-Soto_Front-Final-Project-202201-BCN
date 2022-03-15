@@ -59,5 +59,8 @@
       "!src/interfaces/*.ts",
       "!src/reportWebVitals.ts"
     ]
+  },
+  "devDependencies": {
+    "msw": "^0.39.1"
   }
 }

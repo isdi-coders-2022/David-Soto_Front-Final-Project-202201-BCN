@@ -17,7 +17,7 @@ const HeroCard = ({ hero }: HeroProp): JSX.Element => {
 
   return (
     <>
-      <img src="" alt="" />
+      <img src={hero.images.sm} alt={hero.name} />
       <h2>Name: {hero.name}</h2>
       <p>Serie: {hero.biography.fullName}</p>
       <p>Global Power: {globalPower}</p>
