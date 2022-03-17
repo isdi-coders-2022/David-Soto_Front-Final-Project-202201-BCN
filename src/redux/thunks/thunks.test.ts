@@ -1,4 +1,3 @@
-import actionTypes from "../actionTypes/actionTypes";
 import { loadGlobalListThunk } from "./thunks";
 
 describe("Given a loadGlobalListThunk", () => {
