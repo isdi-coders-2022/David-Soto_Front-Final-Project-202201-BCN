@@ -2,19 +2,6 @@ html,
 body {
   background-color: #383838;
   margin: 0;
+  padding: 0;
   font-family: "Dosis", sans-serif;
-}
-
-h2 {
-  display: flex;
-  justify-content: center;
-  background-color: #d4d4d4;
-  margin: 10px;
-  border: 5px inset;
-  border-color: black;
-  padding: 0px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  transform: skew(10deg);
-  max-width: 400px;
 }

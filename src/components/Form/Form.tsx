@@ -5,14 +5,21 @@ const Form = () => {
     <>
       <FormStyled>
         <h2>Create Hero</h2>
-        <div className="form">
-          <div className="basic-info">
-            <label htmlFor="">Name: </label>
-            <input type="text" />
-            <label htmlFor="">Alias: </label>
-            <input type="text" />
-            <label htmlFor="">Creator: </label>
-            <input type="text" />
+        <div className="container">
+          <div className="first-column">
+            <div className="form">
+              <div className="basic-info">
+                <label htmlFor="">Name: </label>
+                <input type="text" />
+                <label htmlFor="">Alias: </label>
+                <input type="text" />
+                <label htmlFor="">Creator: </label>
+                <input type="text" />
+              </div>
+            </div>
+            <div className="button-container">
+              <button>Submit</button>
+            </div>
           </div>
           <div className="stats-info">
             <label htmlFor="">Intelligence</label>
@@ -30,8 +37,6 @@ const Form = () => {
           </div>
         </div>
       </FormStyled>
-
-      <button>Submit</button>
     </>
   );
 };
