@@ -5,3 +5,8 @@ export const loadGlobalListAction = (heroes: Hero[]) => ({
   type: actionTypes.loadGlobalList,
   heroes,
 });
+
+export const createHeroAction = (hero: Hero) => ({
+  type: actionTypes.createHero,
+  hero,
+});
