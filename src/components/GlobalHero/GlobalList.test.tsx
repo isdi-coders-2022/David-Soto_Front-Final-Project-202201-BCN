@@ -51,7 +51,7 @@ describe("Given a GlobalList component", () => {
           },
         },
       ];
-      const expectedText: string = "Name: TestingHero";
+      const expectedText: string = "TestingHero";
 
       render(<GlobalList heroes={testingHeroes}></GlobalList>);
 
