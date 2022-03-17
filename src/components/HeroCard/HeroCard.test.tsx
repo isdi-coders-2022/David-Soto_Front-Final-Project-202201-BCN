@@ -49,7 +49,7 @@ describe("Given a HeroCard component", () => {
           lg: "IMG",
         },
       };
-      const expectedText: string = "Name: TestingHero";
+      const expectedText: string = "TestingHero";
 
       render(<HeroCard hero={testingHero}></HeroCard>);
 

@@ -1,3 +1,4 @@
+import GlobalListStyle from "../../styles/GlobalListStyle";
 import HeroCard from "../HeroCard/HeroCard";
 import { Hero } from "../interfaces/Hero";
 
@@ -8,11 +9,11 @@ interface HeroListProps {
 const GlobalList = ({ heroes }: HeroListProps) => {
   return (
     <>
-      <ul>
+      <GlobalListStyle>
         {heroes.map((hero: Hero) => (
           <HeroCard key={hero.id} hero={hero} />
         ))}
-      </ul>
+      </GlobalListStyle>
     </>
   );
 };
