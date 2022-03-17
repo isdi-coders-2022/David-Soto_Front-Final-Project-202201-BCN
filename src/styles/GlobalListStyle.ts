@@ -1,13 +1,9 @@
-html,
-body {
-  background-color: #383838;
-  margin: 0;
-  font-family: "Dosis", sans-serif;
-}
+import styled from "styled-components";
 
-h2 {
+const GlobalListStyle = styled.ul`
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   background-color: #d4d4d4;
   margin: 10px;
   border: 5px inset;
@@ -15,6 +11,6 @@ h2 {
   padding: 0px;
   padding-top: 10px;
   padding-bottom: 10px;
-  transform: skew(10deg);
-  max-width: 400px;
-}
+`;
+
+export default GlobalListStyle;
