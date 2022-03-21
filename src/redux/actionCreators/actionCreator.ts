@@ -1,4 +1,5 @@
 import { Hero } from "../../components/interfaces/Hero";
+import User from "../../components/interfaces/User";
 import actionTypes from "../actionTypes/actionTypes";
 
 export const loadGlobalListAction = (heroes: Hero[]) => ({
@@ -9,4 +10,9 @@ export const loadGlobalListAction = (heroes: Hero[]) => ({
 export const createHeroAction = (hero: Hero) => ({
   type: actionTypes.createHero,
   hero,
+});
+
+export const loginUserActions = (user: User) => ({
+  type: actionTypes.loginUser,
+  user,
 });
