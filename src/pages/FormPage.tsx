@@ -1,6 +1,6 @@
 import Form from "../components/Form/Form";
 
-const CreateHeroPage = () => {
+const FormPage = () => {
   return (
     <>
       <Form />
@@ -8,4 +8,4 @@ const CreateHeroPage = () => {
   );
 };
 
-export default CreateHeroPage;
+export default FormPage;

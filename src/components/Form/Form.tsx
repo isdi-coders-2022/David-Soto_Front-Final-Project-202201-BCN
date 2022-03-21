@@ -3,7 +3,7 @@ import FormStyled from "../../styles/FormStyle";
 const Form = () => {
   return (
     <>
-      <FormStyled>
+      <FormStyled noValidate autoComplete="off" onSubmit={handleSubmit}>
         <h2>Create Hero</h2>
         <div className="container">
           <div className="first-column">

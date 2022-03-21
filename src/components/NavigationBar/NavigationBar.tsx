@@ -5,17 +5,23 @@ const NavigationStyled: StyledComponent<"ul", {}> = styled.ul`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #242424;
-  margin: 0;
+  margin: 10px;
   padding: 0;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border: 4px inset;
+  border-color: black;
+  height: 80px;
+  background-image: url("./dotsBackground.jpg");
+  background-size: cover;
 
   h1 {
-    margin-right: 20px;
+    background-color: #d4d4d4;
+    transform: skew(-10deg);
+    border: 4px inset;
+    border-color: black;
+    margin: 15px;
     font-family: "Permanent Marker", cursive;
-    color: White;
-    text-shadow: rgb(51, 51, 51) 0px 0px 0px 3px;
+    color: black;
+    width: 250px;
   }
 
   .navigation {
@@ -27,24 +33,24 @@ const NavigationStyled: StyledComponent<"ul", {}> = styled.ul`
   }
 
   li {
+    background-color: #d4d4d4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px inset;
+    transform: skew(-10deg);
+    border-color: black;
     list-style: none;
+    height: 50px;
+    width: 70px;
     margin-right: 20px;
     margin-left: 20px;
     align-self: center;
+    text-align: center;
   }
 
   a {
-    background-color: yellow;
-    border-radius: 33px;
-    align-content: center;
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    text-align: center;
-    color: Blue;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    color: black;
     text-decoration: none;
   }
 `;
@@ -61,7 +67,7 @@ const NavigationBar = () => {
             <Link to="/squad">My Hero Squad</Link>
           </li>
           <li>
-            <Link to="/friends">Friends</Link>
+            <Link to="/hero-form">Create Hero</Link>
           </li>
         </div>
         <h1>Ultra Warriors</h1>
