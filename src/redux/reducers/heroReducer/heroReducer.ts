@@ -13,10 +13,6 @@ const heroReducer = (
       newHeroes = [...action.heroes.heroes];
       break;
 
-    case actionTypes.createHero:
-      newHeroes = [...currentHeroes, action.hero];
-      break;
-
     default:
       newHeroes = [...currentHeroes];
       break;
