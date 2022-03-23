@@ -1,5 +1,10 @@
-import CreatedHero from "../../interfaces/CreatedHero";
-import { loadCreatedHeroThunk, loadGlobalListThunk } from "./thunks";
+import {
+  loadCreatedHeroThunk,
+  loadGlobalListThunk,
+  loginUserThunks,
+} from "./thunks";
+
+jest.mock("jwt-decode");
 
 describe("Given a loadGlobalListThunk", () => {
   describe("When it's called", () => {
@@ -69,8 +74,6 @@ describe("Given a loadGlobalListThunk", () => {
 describe("Given a loadCreatedHeroThunk", () => {
   describe("When it's called", () => {
     test("Then it should call dispatch function", async () => {
-      jest.setTimeout(9000);
-
       const expectedAction = {
         heroes: {
           heroes: [
@@ -120,15 +123,33 @@ describe("Given a loadCreatedHeroThunk", () => {
             },
           ],
         },
-        type: "load-global-list",
+        type: "load-created-list",
       };
 
       const dispatch = jest.fn();
       const getState = jest.fn();
 
-      await loadCreatedHeroThunk(dispatch, getState);
+      await loadCreatedHeroThunk(dispatch, getState, undefined);
 
       expect(dispatch).toHaveBeenCalledWith(expectedAction);
+    });
+  });
+});
+
+describe("Given a loginUserThunks", () => {
+  describe("When it's called", () => {
+    test("Then it should call dispatch function", async () => {
+      const expectedUser = {
+        username: "name",
+        password: "cryptPass",
+      };
+
+      const dispatch = jest.fn();
+
+      const loginThunk = await loginUserThunks(expectedUser);
+      await loginThunk(dispatch);
+
+      expect(dispatch).toHaveBeenCalled();
     });
   });
 });
