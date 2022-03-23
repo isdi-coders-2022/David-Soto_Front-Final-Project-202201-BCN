@@ -108,7 +108,7 @@ describe("Given a heroReducer", () => {
   });
   describe("When it receives heroes, with a wrong action", () => {
     test("Then it should return the same heroes", () => {
-      const heroes = [
+      const heroes: Hero[] = [
         {
           id: 12,
           name: "TestingHero",
