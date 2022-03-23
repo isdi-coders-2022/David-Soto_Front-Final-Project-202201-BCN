@@ -1,4 +1,4 @@
-import { Hero } from "../../../components/interfaces/Hero";
+import { Hero } from "../../../interfaces/Hero";
 import actionTypes from "../../actionTypes/actionTypes";
 import heroReducer from "./heroReducer";
 

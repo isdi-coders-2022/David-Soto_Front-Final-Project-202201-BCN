@@ -1,12 +1,12 @@
+import CreatedHero from "../../interfaces/CreatedHero";
+import { Powerstats } from "../../interfaces/Hero";
 import CardStyled from "../../styles/CardStyle";
-import { Hero, Powerstats } from "../../interfaces/Hero";
-import { addFavoriteThunks } from "../../redux/thunks/thunks";
 
 interface HeroProp {
-  hero: Hero;
+  hero: CreatedHero;
 }
 
-const HeroCard = ({ hero }: HeroProp): JSX.Element => {
+const CreatedHeroCard = ({ hero }: HeroProp): JSX.Element => {
   const heroStats: Powerstats = hero.powerstats;
 
   const globalPower: number =
@@ -20,22 +20,16 @@ const HeroCard = ({ hero }: HeroProp): JSX.Element => {
   return (
     <>
       <CardStyled>
-        <img width={100} src={hero.images.sm} alt={hero.name} />
+        <img width={100} src="./noHero.jpg" alt={hero.name} />
         <div className="info_container">
           <div className="info">
             <h2>{hero.name}</h2>
-            <p>Full Name: {hero.biography.fullName}</p>
+            <p>Full Name: {hero.name}</p>
             <p>Global Power: {globalPower}</p>
           </div>
           <div className="button_container">
             <button>Scann</button>
-            <button
-              onClick={() => {
-                return addFavoriteThunks(hero);
-              }}
-            >
-              +
-            </button>
+            <button>+</button>
           </div>
         </div>
       </CardStyled>
@@ -43,4 +37,4 @@ const HeroCard = ({ hero }: HeroProp): JSX.Element => {
   );
 };
 
-export default HeroCard;
+export default CreatedHeroCard;
