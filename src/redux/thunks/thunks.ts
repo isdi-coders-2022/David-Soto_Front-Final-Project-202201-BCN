@@ -146,7 +146,7 @@ export const deleteHeroThunks =
   (createdHero: CreatedHero) => async (dispatch: AppDispatch) => {
     const token = localStorage.getItem("authorization");
     const response = await fetch(
-      `${process.env.REACT_APP_API_URL}/hero/deleteHero/${hero.id}`,
+      `${process.env.REACT_APP_API_URL}/hero/deleteHero/${createdHero.name}`,
       {
         method: "POST",
         headers: {

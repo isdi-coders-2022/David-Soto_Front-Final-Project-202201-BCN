@@ -28,6 +28,7 @@ const Form = () => {
     try {
       event.preventDefault();
       dispatch(createHeroThunks(formData));
+      navigate("/squad");
     } catch (error) {}
   };
 

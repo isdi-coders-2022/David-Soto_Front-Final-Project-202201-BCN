@@ -1,5 +1,6 @@
 import { screen, render } from "@testing-library/react";
 import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
 import store from "../redux/store";
 import CreateHeroPage from "./FormPage";
 
@@ -10,7 +11,10 @@ describe("Given a CreateHeroPage", () => {
 
       render(
         <Provider store={store}>
-          <CreateHeroPage />
+          <BrowserRouter>
+            {" "}
+            <CreateHeroPage />
+          </BrowserRouter>
         </Provider>
       );
 
