@@ -1,7 +1,6 @@
 import { Hero } from "../../interfaces/Hero";
 import User from "../../interfaces/User";
 import {
-  createHeroAction,
   loadCreatedListAction,
   loadGlobalListAction,
   loginUserActions,
@@ -10,7 +9,6 @@ import {
 import { AppDispatch, AppThunk } from "../store";
 import jwtDecode from "jwt-decode";
 import CreatedHero from "../../interfaces/CreatedHero";
-import { response } from "msw";
 
 export const loadGlobalListThunk: AppThunk = async (
   dispatch: AppDispatch
@@ -129,7 +127,7 @@ export const createHeroThunks =
 export const addFavoriteThunks =
   (hero: Hero) => async (dispatch: AppDispatch) => {
     const token = localStorage.getItem("authorization");
-    const favoriteHero = await fetch(
+    const response = await fetch(
       `${process.env.REACT_APP_API_URL}/hero/favorite/${hero.id}`,
       {
         method: "POST",
@@ -140,6 +138,8 @@ export const addFavoriteThunks =
         body: JSON.stringify(hero.id),
       }
     );
+    const favoriteHero: Hero[] = await response.json();
+    dispatch(loadGlobalListAction(favoriteHero));
   };
 
 export const deleteHeroThunks =

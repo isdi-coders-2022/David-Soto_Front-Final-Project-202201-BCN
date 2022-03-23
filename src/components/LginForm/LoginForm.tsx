@@ -18,6 +18,7 @@ const LoginForm = () => {
     try {
       event.preventDefault();
       dispatch(loginUserThunks(formData));
+      navigate("/global-list");
     } catch (error) {}
   };
 

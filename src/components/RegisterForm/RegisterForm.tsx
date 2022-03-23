@@ -20,6 +20,7 @@ const RegisterForm = () => {
     try {
       event.preventDefault();
       dispatch(registerUserThunks(formData));
+      navigate("/global-list");
     } catch (error) {}
   };
 
