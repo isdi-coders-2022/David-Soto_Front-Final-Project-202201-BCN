@@ -1,7 +1,10 @@
+import CreatedHero from "../../interfaces/CreatedHero";
 import {
+  createHeroThunks,
   loadCreatedHeroThunk,
   loadGlobalListThunk,
   loginUserThunks,
+  registerUserThunks,
 } from "./thunks";
 
 jest.mock("jwt-decode");
@@ -148,6 +151,50 @@ describe("Given a loginUserThunks", () => {
 
       const loginThunk = await loginUserThunks(expectedUser);
       await loginThunk(dispatch);
+
+      expect(dispatch).toHaveBeenCalled();
+    });
+  });
+});
+
+describe("Given a registerUserThunks", () => {
+  describe("When it's called", () => {
+    test("Then it should call dispatch function", async () => {
+      const expectedUser = {
+        username: "name",
+        password: "cryptPass",
+      };
+
+      const dispatch = jest.fn();
+
+      const registerThunk = await registerUserThunks(expectedUser);
+      await registerThunk(dispatch);
+
+      expect(dispatch).toHaveBeenCalled();
+    });
+  });
+});
+
+describe("Given a createHeroThunks", () => {
+  describe("When it's called", () => {
+    test("Then it should call dispatch function", async () => {
+      const expectedHero: CreatedHero = {
+        creator: "me",
+        alias: "TestingHero",
+        name: "TestingHeroName",
+        powerstats: {
+          intelligence: 1,
+          strength: 1,
+          speed: 1,
+          durability: 1,
+          power: 1,
+          combat: 1,
+        },
+      };
+      const dispatch = jest.fn();
+
+      const createThunk = await createHeroThunks(expectedHero);
+      await createThunk(dispatch);
 
       expect(dispatch).toHaveBeenCalled();
     });
