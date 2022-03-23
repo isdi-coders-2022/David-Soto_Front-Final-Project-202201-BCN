@@ -13,7 +13,7 @@ export const loadCreatedListAction = (heroes: CreatedHero[]) => ({
   heroes,
 });
 
-export const createHeroAction = (hero: Hero) => ({
+export const createHeroAction = (hero: CreatedHero) => ({
   type: actionTypes.createHero,
   hero,
 });
