@@ -1,6 +1,6 @@
 import CreatedHero from "../../interfaces/CreatedHero";
 import { Powerstats } from "../../interfaces/Hero";
-import CardStyled from "../../styles/CardStyle";
+import CardStyled from "../../styles/CardStyled";
 
 interface HeroProp {
   hero: CreatedHero;

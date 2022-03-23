@@ -1,4 +1,4 @@
-import CardStyled from "../../styles/CardStyle";
+import CardStyled from "../../styles/CardStyled";
 import { Hero, Powerstats } from "../../interfaces/Hero";
 import { addFavoriteThunks } from "../../redux/thunks/thunks";
 

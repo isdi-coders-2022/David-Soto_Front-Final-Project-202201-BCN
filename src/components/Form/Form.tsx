@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
 import { createHeroThunks } from "../../redux/thunks/thunks";
-import FormStyled from "../../styles/FormStyle";
+import FormStyled from "../../styles/FormStyled";
 import CreatedHero from "../../interfaces/CreatedHero";
 
 const Form = () => {
