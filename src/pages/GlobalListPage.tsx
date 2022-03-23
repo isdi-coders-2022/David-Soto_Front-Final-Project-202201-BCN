@@ -14,6 +14,7 @@ const GlobalListPage = (): JSX.Element => {
 
   return (
     <>
+      <h2>Global Hero List</h2>
       <GlobalList heroes={heroState}></GlobalList>
     </>
   );

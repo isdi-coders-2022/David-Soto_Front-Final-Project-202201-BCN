@@ -1,16 +1,16 @@
-import { Hero } from "../../../interfaces/Hero";
+import CreatedHero from "../../../interfaces/CreatedHero";
 import { AnyAction } from "redux";
 import actionTypes from "../../actionTypes/actionTypes";
 
-const heroReducer = (
-  currentHeroes: Hero[] = [],
+const createdHeroReducer = (
+  currentHeroes: CreatedHero[] = [],
   action: AnyAction = { type: "" }
 ) => {
-  let newHeroes: Hero[];
+  let newHeroes: CreatedHero[];
 
   switch (action.type) {
-    case actionTypes.loadGlobalList:
-      newHeroes = [...action.heroes.heroes];
+    case actionTypes.loadCreatedList:
+      newHeroes = [...action.heroes];
       break;
 
     case actionTypes.createHero:
@@ -25,4 +25,4 @@ const heroReducer = (
   return newHeroes;
 };
 
-export default heroReducer;
+export default createdHeroReducer;

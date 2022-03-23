@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { Hero } from "../interfaces/Hero";
+import { Hero } from "../../interfaces/Hero";
 import HeroCard from "./HeroCard";
 
 describe("Given a HeroCard component", () => {

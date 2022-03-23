@@ -1,7 +1,7 @@
 const HomePage = () => {
   return (
     <>
-      <button>Login</button>
+      <h2>Login</h2>
 
       <p>don't have and acount, register now!</p>
     </>
