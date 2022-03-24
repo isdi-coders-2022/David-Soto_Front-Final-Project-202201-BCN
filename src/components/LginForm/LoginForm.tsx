@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
 import { loginUserThunks } from "../../redux/thunks/thunks";
 import User from "../../interfaces/User";
+import FormStyled from "../../styles/FormStyled";
 
 const LoginForm = () => {
   const blankFields: User = {
@@ -35,7 +36,7 @@ const LoginForm = () => {
 
   return (
     <>
-      <form onSubmit={onSubmit}>
+      <FormStyled onSubmit={onSubmit}>
         <h2>Log in</h2>
         <label htmlFor="username">Username:</label>
         <input
@@ -57,7 +58,7 @@ const LoginForm = () => {
         <p>
           Still not registered? <a href="/register">register here!</a>
         </p>
-      </form>
+      </FormStyled>
     </>
   );
 };

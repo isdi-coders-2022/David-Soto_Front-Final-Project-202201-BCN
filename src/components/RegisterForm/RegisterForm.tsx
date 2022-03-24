@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
 import { registerUserThunks } from "../../redux/thunks/thunks";
 import User from "../../interfaces/User";
+import FormStyled from "../../styles/FormStyled";
 
 const RegisterForm = () => {
   let email;
@@ -37,7 +38,7 @@ const RegisterForm = () => {
 
   return (
     <>
-      <form onSubmit={onSubmit}>
+      <FormStyled noValidate autoComplete="off" onSubmit={onSubmit}>
         <h2>Register Now</h2>
         <label htmlFor="username">Username:</label>
         <input
@@ -67,7 +68,7 @@ const RegisterForm = () => {
         <p>
           Already registered? <a href="/login">log in here!</a>
         </p>
-      </form>
+      </FormStyled>
     </>
   );
 };
